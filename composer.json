@@ -8,11 +8,20 @@
         {
             "type": "vcs",
             "url": "https://github.com/codeigniter4/codeigniter4"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/lonnieezell/myth-auth"
         }
     ],
    "require": {
         "php": ">=7.2",
-        "codeigniter4/codeigniter4": "dev-develop"
+        "codeigniter4/codeigniter4": "dev-develop",
+        "myth/auth": "dev-develop",
+        "tatter/addins": "^1.1",
+        "components/jquery": "^3.3",
+        "twbs/bootstrap": "^4.3",
+        "thiagoalessio/tesseract_ocr": "^2.7"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
