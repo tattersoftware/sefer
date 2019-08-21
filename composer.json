@@ -4,6 +4,8 @@
     "description": "CodeIgniter4 starter app",
     "homepage": "https://codeigniter.com",
     "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "vcs",
@@ -21,6 +23,8 @@
         "tatter/addins": "^1.1",
         "components/jquery": "^3.3",
         "twbs/bootstrap": "^4.3",
+        "fortawesome/font-awesome": "^5.8",
+        "enyo/dropzone": "^5.5",
         "thiagoalessio/tesseract_ocr": "^2.7"
     },
     "require-dev": {
@@ -29,7 +33,8 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "composer dump-autoload"
+            "composer dump-autoload",
+            "./post-update.sh"
         ]
     },
     "support": {
