@@ -1,0 +1,19 @@
+body {
+	background-color: #444444;
+	color: #BABABA;
+	filter: brightness(85%);
+}
+
+.navbar {
+	background: #718A88;
+}
+
+footer {
+	background-color: #343434;
+}
+
+.themed-select {
+	background-color: #888888;
+	color: #343434;
+	border-color: #444444;
+}

@@ -1,9 +1,9 @@
 {
-    "name": "codeigniter4/devstarter",
+    "name": "tatter/sefer",
     "type": "project",
-    "description": "CodeIgniter4 starter app",
-    "homepage": "https://codeigniter.com",
-    "license": "MIT",
+    "description": "The Sefer Project",
+    "homepage": "https://sefer.red",
+    "license": "GNU General Public License",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
@@ -25,7 +25,8 @@
         "twbs/bootstrap": "^4.3",
         "fortawesome/font-awesome": "^5.8",
         "enyo/dropzone": "^5.5",
-        "thiagoalessio/tesseract_ocr": "^2.7"
+        "thiagoalessio/tesseract_ocr": "^2.7",
+        "tatter/files": "^1.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
@@ -36,10 +37,5 @@
             "composer dump-autoload",
             "./post-update.sh"
         ]
-    },
-    "support": {
-        "forum": "http://forum.codeigniter.com/",
-        "source": "https://github.com/codeigniter4/CodeIgniter4",
-        "slack": "https://codeigniterchat.slack.com"
     }
 }
