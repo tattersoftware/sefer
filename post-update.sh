@@ -13,6 +13,11 @@ cp -n app/index.html public/assets/vendor/
 
 ### Specific package handling
 
+# Vue.js
+rm -rf public/assets/vendor/vue
+cp -R vendor/vuejs/vue/dist public/assets/vendor/vue
+cp -n app/index.html public/assets/vendor/vue/
+
 # JQuery
 rm -rf public/assets/vendor/jquery
 mkdir public/assets/vendor/jquery
