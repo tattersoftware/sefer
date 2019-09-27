@@ -16,6 +16,7 @@ class Assets extends \Tatter\Assets\Config\Assets
 	// additional assets to load per route - no leading/trailing slashes
 	public $routes = [
 		'' => [
+			'vendor/vue/vue.js',
 			'vendor/bootstrap/bootstrap.min.css',
 			'vendor/bootstrap/bootstrap.bundle.min.js',
 			'vendor/font-awesome/css/all.min.css',
