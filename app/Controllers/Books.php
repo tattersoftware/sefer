@@ -5,7 +5,7 @@ use CodeIgniter\Controller;
 
 class Books extends BaseController
 {
-	public __construct()
+	public function __construct()
 	{
 		$this->model = new BookModel();
 	}

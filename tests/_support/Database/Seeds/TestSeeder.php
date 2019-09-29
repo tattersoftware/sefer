@@ -7,6 +7,7 @@ class TestSeeder extends Seeder
 {
 	public function run()
 	{
+		// Books
 		$rows = [
 			[
 				'slug'        => 'clark',
