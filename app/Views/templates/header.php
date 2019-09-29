@@ -40,7 +40,7 @@ helper('auth');
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		
+
 <?php
 if (logged_in()):
 ?>
@@ -50,12 +50,14 @@ if (logged_in()):
 					<a class="nav-link" href="<?= site_url() ?>">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="<?= site_url('books') ?>">Books</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="<?= site_url('files') ?>">Files</a>
 				</li>
 			</ul>
 			<a class="navbar-text" href="<?=route_to('logout') ?>" id="login"><i class="fas fa-sign-out-alt"></i> Logout</a>
     	</div>
-
 <?php
 else:
 ?>

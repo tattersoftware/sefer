@@ -10,9 +10,9 @@ class CreateBooksTables extends Migration
 		
 		// Books
 		$fields = [
-			'slug'         => ['type' => 'varchar', 'constraint' => 31],
 			'title'        => ['type' => 'varchar', 'constraint' => 255],
 			'isbn'         => ['type' => 'varchar', 'constraint' => 255],
+			'slug'         => ['type' => 'varchar', 'constraint' => 31],
 			'image_cover'  => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
 			'image_spine'  => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
 			'image_back'   => ['type' => 'varchar', 'constraint' => 255, 'null' => true],

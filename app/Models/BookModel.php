@@ -11,7 +11,7 @@ class BookModel extends Model
 	protected $useSoftDeletes = true;
 
 	protected $allowedFields = [
-		'slug', 'title', 'isbn',
+		'title', 'isbn', 'slug',
 		'image_cover', 'image_spine', 'image_back'
 	];
 
