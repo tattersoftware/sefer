@@ -1,4 +1,5 @@
-<?= view("templates/header") ?>
+<?= $this->extend('templates/public') ?>
+<?= $this->section('main') ?>
 
 <div class="container">
 	<h1 class="display-4">Edit Book</h1>
@@ -13,4 +14,4 @@
 
 </div>
 
-<?= view("templates/footer") ?>
+<?= $this->endSection() ?>

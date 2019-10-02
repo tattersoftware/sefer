@@ -30,6 +30,7 @@ helper('auth');
 	<?= service('assets')->displayFile('vendor/jquery/jquery.min.js') ?>
 	<?= service('alerts')->css() ?>
 	<?= view('Tatter\Themes\Views\css') ?>
+	<?= $this->renderSection('pageStyles') ?>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light">
@@ -77,3 +78,25 @@ endif;
 	<?= service('alerts')->display() ?>
 	
 	<main role="main" class="container my-5 pb-5">
+		<?= $this->renderSection('main') ?>
+	</main>
+
+	<footer class="footer">
+		<div class="float-left mx-4">
+			<?= themes_form('themed-select custom-select custom-select-sm') ?>
+		</div>
+		<div class="container">
+			<div class="col text-muted text-center">&copy; <?=date("Y") ?> Sefer Project</div>
+		</div>
+	</footer>
+	
+	<script>
+		var baseUrl = "<?=base_url() ?>";
+		var siteUrl = "<?=site_url() ?>";
+	</script>
+	
+	<?= service('assets')->display('js') ?>
+
+	<?= $this->renderSection('pageScripts') ?>
+</body>
+</html>
