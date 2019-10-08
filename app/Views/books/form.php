@@ -1,5 +1,5 @@
 
-	<?= form_open(isset($book) ? "books/{$book->id}" : 'books') ?>
+	<?= form_open(isset($book) ? "books/{$book->id}" : 'books', ['onsubmit'=>'return submitValidateCallback(this);']) ?>
 
 		<div class="form-group">
 			<label for="title">Book title</label>

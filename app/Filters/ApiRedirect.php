@@ -8,12 +8,11 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Config\Services;
 use CodeIgniter\Honeypot\Exceptions\HoneypotException;
 
-class Honeypot implements FilterInterface
+class ApiRedirect implements FilterInterface
 {
 
 	/**
-	 * Checks if Honeypot field is empty; if not
-	 * then the requester is a bot
+	 * Intercepts AJAX requests and checks for a corresponding API controller.
 	 *
 	 * @param CodeIgniter\HTTP\RequestInterface $request
 	 *
@@ -21,15 +20,25 @@ class Honeypot implements FilterInterface
 	 */
 	public function before(RequestInterface $request)
 	{
-		$honeypot = Services::honeypot(new \Config\Honeypot());
-		if ($honeypot->hasContent($request))
+		$path = $request->uri->getPath();
+		
+		if (strpos($path, 'api') !== false)
 		{
-			throw HoneypotException::isBot();
+			return;
+		}
+		$path = '/api/' . $path;
+		
+		$router = service('router');
+		$controller = $router->handle($path);
+		
+		if (class_exists($controller))
+		{
+			return redirect()->to($path);
 		}
 	}
 
 	/**
-	 * Attach a honypot to the current response.
+	 * Not implemented
 	 *
 	 * @param  CodeIgniter\HTTP\RequestInterface  $request
 	 * @param  CodeIgniter\HTTP\ResponseInterface $response
@@ -37,8 +46,7 @@ class Honeypot implements FilterInterface
 	 */
 	public function after(RequestInterface $request, ResponseInterface $response)
 	{
-		$honeypot = Services::honeypot(new \Config\Honeypot());
-		$honeypot->attachHoneypot($response);
+	
 	}
 
 }

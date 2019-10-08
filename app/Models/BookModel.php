@@ -18,7 +18,8 @@ class BookModel extends Model
 	protected $useTimestamps = true;
 
 	protected $validationRules    = [
-		'slug' => 'required|max_length[31]',
+		'title' => 'required|max_length[255]',
+		'slug'  => 'required|alpha_dash|max_length[31]',
 	];
 	protected $validationMessages = [];
 	protected $skipValidation     = false;

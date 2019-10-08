@@ -1,14 +1,15 @@
 <?php namespace App\Controllers;
 
 use App\Models\BookModel;
-use CodeIgniter\Controller;
+use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\RESTful\ResourcePresenter;
 
-class Books extends BaseController
+class Books extends ResourcePresenter
 {
-	public function __construct()
-	{
-		$this->model = new BookModel();
-	}
+	use ResponseTrait;
+	
+	protected $helpers   = ['alerts', 'auth', 'themes'];
+	protected $modelName = 'App\Models\BookModel';
 	
 	public function index()
 	{
@@ -19,12 +20,30 @@ class Books extends BaseController
 	public function new()
 	{
 		helper('form');
-		return view('books/new');
+		return $this->request->isAJAX() ? view('books/form') : view('books/new');
 	}
 	
-	public function edit($bookId)
+	public function create()
 	{
-		$book = $this->model->find($bookId);
+		$data = $this->request->getPost();
+		if (! $id = $this->model->insert($data))
+		{
+			foreach ($this->model->errors() as $error)
+			{
+				alert('warning', $error);
+			}
+        	return redirect()->back()->withInput();
+		}
+
+		$book = $this->model->find($id);
+		alert('success', lang('Books.created', [$book->title]));
+		
+		return redirect()->to('books/index');
+	}
+	
+	public function edit($id = null)
+	{
+		$book = $this->model->find($id);
 		if (empty($book))
 		{
 			alert('danger', lang('Books.notFound'));

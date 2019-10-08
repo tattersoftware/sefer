@@ -14,11 +14,11 @@
 
 		<?php foreach ($books as $book): ?>
 
-		<div class="card book" data-id="<?= $book->id ?>" onclick="addModal();">
+		<div class="card book" data-id="<?= $book->id ?>">
 			<img src="<?= $book->image_cover ?? base_url('assets/book.png') ?>" class="card-img-top" alt="Book cover">
 			<div class="card-body">
 				<h5 class="card-title"><?= $book->title ?></h5>
-				<p class="card-text"><small class="text-muted"><?= anchor("books/{$book->id}/edit", $book->slug) ?></small></p>
+				<p class="card-text"><small class="text-muted"><?= anchor("books/edit/{$book->id}", $book->slug) ?></small></p>
 			</div>
 		</div>
 		
