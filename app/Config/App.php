@@ -188,27 +188,28 @@ class App extends BaseConfig
 	public $sessionMatchIP           = false;
 	public $sessionTimeToUpdate      = 300;
 	public $sessionRegenerateDestroy = false;
-
+	
 	/*
 	|--------------------------------------------------------------------------
-	| Cookie Related Variables
+	| Cross Site Request Forgery
 	|--------------------------------------------------------------------------
+	| Enables a CSRF cookie token to be set. When set to TRUE, token will be
+	| checked on a submitted form. If you are accepting user data, it is strongly
+	| recommended CSRF protection be enabled.
 	|
-	| 'cookiePrefix'   = Set a cookie name prefix if you need to avoid collisions
-	| 'cookieDomain'   = Set to .your-domain.com for site-wide cookies
-	| 'cookiePath'     = Typically will be a forward slash
-	| 'cookieSecure'   = Cookie will only be set if a secure HTTPS connection exists.
-	| 'cookieHTTPOnly' = Cookie will only be accessible via HTTP(S) (no javascript)
-	|
-	| Note: These settings (with the exception of 'cookie_prefix' and
-	|       'cookie_httponly') will also affect sessions.
-	|
+	| CSRFTokenName   = The token name
+	| CSRFHeaderName  = The header name
+	| CSRFCookieName  = The cookie name
+	| CSRFExpire      = The number in seconds the token should expire.
+	| CSRFRegenerate  = Regenerate token on every submission
+	| CSRFRedirect    = Redirect to previous page with error on failure
 	*/
-	public $cookiePrefix   = 'sefer_';
-	public $cookieDomain   = '';
-	public $cookiePath     = '/';
-	public $cookieSecure   = false;
-	public $cookieHTTPOnly = false;
+	public $CSRFTokenName  = 'csrf_test_name';
+	public $CSRFHeaderName = 'X-CSRF-TOKEN';
+	public $CSRFCookieName = 'csrf_cookie_name';
+	public $CSRFExpire     = 7200;
+	public $CSRFRegenerate = true;
+	public $CSRFRedirect   = true;
 
 	/*
 	|--------------------------------------------------------------------------
