@@ -26,10 +26,10 @@ helper('auth');
 	<meta name="theme-color" content="#ffffff">
 	-->
 
-	<?= service('assets')->display('css') ?>
-	<?= service('assets')->displayFile('vendor/jquery/jquery.min.js') ?>
+	<?= service('assets')->css() ?>
 	<?= service('alerts')->css() ?>
 	<?= view('Tatter\Themes\Views\css') ?>
+	<?= service('assets')->tag('vendor/jquery/jquery.min.js') ?>
 	<?= $this->renderSection('pageStyles') ?>
 </head>
 <body>
@@ -95,7 +95,7 @@ endif;
 		var siteUrl = "<?=site_url() ?>";
 	</script>
 	
-	<?= service('assets')->display('js') ?>
+	<?= service('assets')->js() ?>
 
 	<?= $this->renderSection('pageScripts') ?>
 </body>

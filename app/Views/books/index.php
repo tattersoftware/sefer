@@ -14,7 +14,7 @@
 
 		<?php foreach ($books as $book): ?>
 
-		<div class="card book" data-id="<?= $book->id ?>">
+		<div class="card book" data-id="<?= $book->id ?>" onclick="addModal();">
 			<img src="<?= $book->image_cover ?? base_url('assets/book.png') ?>" class="card-img-top" alt="Book cover">
 			<div class="card-body">
 				<h5 class="card-title"><?= $book->title ?></h5>
