@@ -11,7 +11,6 @@ class Test extends BaseCommand
 
     public function run(array $params)
     {
-		$namespaces = \Config\Services::autoloader()->getNamespace();
-		d($namespaces);
+		echo site_url('api') . PHP_EOL;
 	}
 }

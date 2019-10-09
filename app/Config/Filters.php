@@ -14,7 +14,6 @@ class Filters extends BaseConfig
 		'login'       => \Myth\Auth\Filters\LoginFilter::class,
 		'role'        => \Myth\Auth\Filters\RoleFilter::class,
 		'permission'  => \Myth\Auth\Filters\PermissionFilter::class,
-		'apiRedirect' => \App\Filters\ApiRedirect::class,
 	];
 
 	// Always applied before every request
@@ -34,7 +33,7 @@ class Filters extends BaseConfig
 	// (GET, POST, etc) as BEFORE filters only
 	//     like: 'post' => ['CSRF', 'throttle'],
 	public $methods = [
-		'ajax' => ['apiRedirect']
+		//'ajax' => ['apiRedirect']
 	];
 
 	// List filter aliases and any before/after uri patterns

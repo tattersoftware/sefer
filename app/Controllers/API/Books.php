@@ -1,13 +1,8 @@
 <?php namespace App\Controllers\API;
 
-use App\Models\BookModel;
-use CodeIgniter\API\ResponseTrait;
-use CodeIgniter\RESTful\ResourceController;
 
-class Books extends ResourceController
-{
-	use ResponseTrait;
-	
+class Books extends BaseController
+{	
 	protected $modelName = 'App\Models\BookModel';
 	protected $format    = 'json';
 	
@@ -31,13 +26,14 @@ class Books extends ResourceController
 	public function create()
 	{
 		$data = $this->request->getPost();
+
 		if (! $id = $this->model->insert($data))
 		{
-			return $this->failValidationError('Bad Request', null, implode('. ', $this->model->errors()));
+			return $this->formValidationFail();
 		}
 		
 		$book = $this->model->find($id);
-		return $this->respond(null, $this->codes['created'], lang('Books.created', [$book->title]));
+		return $this->respondCreated(null, lang('Books.created', [$book->title]));
 	}
 	
 	public function edit($id = null)
@@ -58,5 +54,18 @@ class Books extends ResourceController
 		$data = ['book' => $book];
 
 		return view('books/form', $data);
+	}
+	
+	public function update($id = null)
+	{
+		$data = $this->request->getPost();
+
+		if (! $this->model->update($id, $data))
+		{
+			return $this->formValidationFail();
+		}
+		
+		$book = $this->model->find($id);
+		return $this->respond(null, 200, lang('Books.updated', [$book->title]));
 	}
 }

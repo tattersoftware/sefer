@@ -17,6 +17,11 @@ class Books extends ResourcePresenter
 		return view('books/index', $data);
 	}
 	
+	public function show($id = null)
+	{
+		echo 'standard old show';
+	}
+	
 	public function new()
 	{
 		helper('form');
@@ -25,6 +30,7 @@ class Books extends ResourcePresenter
 	
 	public function create()
 	{
+		log_message('debug', 'web create');
 		$data = $this->request->getPost();
 		if (! $id = $this->model->insert($data))
 		{
@@ -38,7 +44,7 @@ class Books extends ResourcePresenter
 		$book = $this->model->find($id);
 		alert('success', lang('Books.created', [$book->title]));
 		
-		return redirect()->to('books/index');
+		return redirect()->to('books');
 	}
 	
 	public function edit($id = null)
@@ -49,10 +55,9 @@ class Books extends ResourcePresenter
 			alert('danger', lang('Books.notFound'));
 			return redirect()->back();
 		}
+		$data = ['book' => $book];
 		
 		helper('form');
-		$data = ['book' => $book];
-
-		return view('books/edit', $data);
+		return $this->request->isAJAX() ? view('books/form', $data) : view('books/edit', $data);
 	}
 }

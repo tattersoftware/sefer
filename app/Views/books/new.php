@@ -1,4 +1,4 @@
-<?= $this->extend('templates/public') ?>
+<?= $this->extend('layouts/public') ?>
 <?= $this->section('main') ?>
 
 <div class="container">

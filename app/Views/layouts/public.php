@@ -93,6 +93,7 @@ endif;
 	<script>
 		var baseUrl = "<?=base_url() ?>";
 		var siteUrl = "<?=site_url() ?>";
+		var apiUrl  = "<?=site_url('api/') ?>";
 	</script>
 	
 	<?= service('assets')->js() ?>

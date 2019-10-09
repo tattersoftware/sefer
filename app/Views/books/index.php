@@ -1,12 +1,13 @@
-<?= $this->extend('templates/public') ?>
+<?= $this->extend('layouts/public') ?>
 <?= $this->section('main') ?>
 
 <div class="container">
+	<button type="button" class="btn btn-primary float-right" onclick="return desktopModal('books/new');"><i class="fas fa-plus-circle"></i> New book</button>
 	<h1 class="display-4">Books</h1>
 
 	<?php if (empty($books)): ?>
 	
-	<p>You don't have any books! Would you like to <?= anchor('books/new', 'add one now') ?>?</p>
+	<p>You don't have any books! Would you like to <a href="<?= site_url('books/new') ?>" onclick="return desktopModal('books/new');">add one now</a>?</p>
 	
 	<?php else: ?>
 
@@ -14,7 +15,7 @@
 
 		<?php foreach ($books as $book): ?>
 
-		<div class="card book" data-id="<?= $book->id ?>">
+		<div class="card book mb-3" data-id="<?= $book->id ?>" style="min-width: 12rem; max-width: 12rem;">
 			<img src="<?= $book->image_cover ?? base_url('assets/book.png') ?>" class="card-img-top" alt="Book cover">
 			<div class="card-body">
 				<h5 class="card-title"><?= $book->title ?></h5>

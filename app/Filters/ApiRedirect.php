@@ -22,8 +22,10 @@ class ApiRedirect implements FilterInterface
 	{
 		$path = $request->uri->getPath();
 		
-		if (strpos($path, 'api') !== false)
+		log_message('debug', 'ApiRedirect: '.$path);
+		if (preg_match('#^api.+#i', $path))
 		{
+			log_message('debug', 'ApiRedirect: ignored');
 			return;
 		}
 		$path = '/api/' . $path;

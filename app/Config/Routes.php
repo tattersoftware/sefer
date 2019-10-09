@@ -75,7 +75,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 $routes->presenter('books');
-$routes->resource('api/books', ['controller' => 'App\Controllers\API\Books']);
+$routes->resource('api/books', ['websafe' => 1, 'controller' => 'App\Controllers\API\Books']);
 
 /**
  * --------------------------------------------------------------------
