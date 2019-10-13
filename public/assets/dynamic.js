@@ -122,6 +122,7 @@ function desktopModal(url, options) {
  	}
 
  	loadModal(url, options);
+ 	return false;
  }
  
 // Requests a URL and displays it in a modal

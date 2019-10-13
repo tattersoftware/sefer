@@ -22,8 +22,8 @@
 				<p class="card-text"><small class="text-muted"><?= anchor("books/edit/{$book->id}", $book->slug) ?></small></p>
 			</div>
 			<div class="card-footer">
-				<a class="card-link btn btn-primary" href="<?= site_url("books/show/{$book->id}") ?>">Open</a>
-				<a class="card-link btn btn-link" href="<?= site_url("books/edit/{$book->id}") ?>" onclick="return desktopModal('books/edit/{$book->id}');">Edit</a>
+				<a class="card-link btn btn-primary" href="<?= site_url("books/show/{$book->id}") ?>" onclick="return desktopModal('books/show/<?= $book->id ?>');">Open</a>
+				<a class="card-link btn btn-link" href="<?= site_url("books/edit/{$book->id}") ?>" onclick="return desktopModal('books/edit/<?= $book->id ?>');">Edit</a>
 			</div>
 		</div>
 	
