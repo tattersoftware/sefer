@@ -6,6 +6,12 @@ use Myth\Auth\Authentication\LocalAuthenticator;
 class Auth extends \Myth\Auth\Config\Auth
 {
     //--------------------------------------------------------------------
+    // Layout for the views to extend
+    //--------------------------------------------------------------------
+
+    public $viewLayout = 'layouts/public';
+    
+    //--------------------------------------------------------------------
     // Allow User Registration
     //--------------------------------------------------------------------
     // When enabled (default) any unregistered user may apply for a new

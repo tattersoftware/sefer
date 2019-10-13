@@ -10,6 +10,11 @@ class Books extends BaseController
 		return $this->respond($this->model->findAll());
 	}
 	
+	public function show($id = null)
+	{
+		return $this->respond([$this->model->find($id)]);
+	}
+	
 	public function create()
 	{
 		$data = $this->request->getPost();
