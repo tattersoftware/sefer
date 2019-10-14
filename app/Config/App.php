@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://dev.sefer.red/';
+	public $baseURL = '';
 
 	/*
 	|--------------------------------------------------------------------------
