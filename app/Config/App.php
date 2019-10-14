@@ -188,6 +188,7 @@ class App extends BaseConfig
 	public $sessionMatchIP           = false;
 	public $sessionTimeToUpdate      = 300;
 	public $sessionRegenerateDestroy = false;
+
 	/*
 	|--------------------------------------------------------------------------
 	| Cookie Related Variables
@@ -226,6 +227,7 @@ class App extends BaseConfig
 	| Array:		array('10.0.1.200', '192.168.5.0/24')
 	*/
 	public $proxyIPs = '';
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Cross Site Request Forgery
@@ -263,5 +265,7 @@ class App extends BaseConfig
 	|   - http://www.w3.org/TR/CSP/
 	*/
 	public $CSPEnabled = false;
+
+	//--------------------------------------------------------------------
 
 }
