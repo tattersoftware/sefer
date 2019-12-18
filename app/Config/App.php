@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://dev.sefer.red/';
+	public $baseURL = '';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -124,7 +124,7 @@ class App extends BaseConfig
 	| secure, the user will be redirected to a secure version of the page
 	| and the HTTP Strict Transport Security header will be set.
 	*/
-	public $forceGlobalSecureRequests = true;
+	public $forceGlobalSecureRequests = false;
 
 	/*
 	|--------------------------------------------------------------------------
@@ -204,7 +204,7 @@ class App extends BaseConfig
 	|       'cookie_httponly') will also affect sessions.
 	|
 	*/
-	public $cookiePrefix   = 'sefer_';
+	public $cookiePrefix   = '';
 	public $cookieDomain   = '';
 	public $cookiePath     = '/';
 	public $cookieSecure   = false;
@@ -227,7 +227,7 @@ class App extends BaseConfig
 	| Array:		array('10.0.1.200', '192.168.5.0/24')
 	*/
 	public $proxyIPs = '';
-
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Cross Site Request Forgery
@@ -237,12 +237,14 @@ class App extends BaseConfig
 	| recommended CSRF protection be enabled.
 	|
 	| CSRFTokenName   = The token name
+	| CSRFHeaderName  = The header name
 	| CSRFCookieName  = The cookie name
 	| CSRFExpire      = The number in seconds the token should expire.
 	| CSRFRegenerate  = Regenerate token on every submission
 	| CSRFRedirect    = Redirect to previous page with error on failure
 	*/
 	public $CSRFTokenName  = 'csrf_test_name';
+	public $CSRFHeaderName = 'X-CSRF-TOKEN';
 	public $CSRFCookieName = 'csrf_cookie_name';
 	public $CSRFExpire     = 7200;
 	public $CSRFRegenerate = true;
@@ -263,5 +265,7 @@ class App extends BaseConfig
 	|   - http://www.w3.org/TR/CSP/
 	*/
 	public $CSPEnabled = false;
+
+	//--------------------------------------------------------------------
 
 }

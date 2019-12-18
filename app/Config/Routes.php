@@ -74,6 +74,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->presenter('books');
+$routes->resource('api/books', ['controller' => 'App\Controllers\API\Books']);
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing

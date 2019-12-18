@@ -26,10 +26,11 @@ helper('auth');
 	<meta name="theme-color" content="#ffffff">
 	-->
 
-	<?= service('assets')->display('css') ?>
-	<?= service('assets')->displayFile('vendor/jquery/jquery.min.js') ?>
+	<?= service('assets')->css() ?>
 	<?= service('alerts')->css() ?>
 	<?= view('Tatter\Themes\Views\css') ?>
+	<?= service('assets')->tag('vendor/jquery/jquery.min.js') ?>
+	<?= $this->renderSection('pageStyles') ?>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light">
@@ -40,7 +41,7 @@ helper('auth');
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		
+
 <?php
 if (logged_in()):
 ?>
@@ -50,12 +51,14 @@ if (logged_in()):
 					<a class="nav-link" href="<?= site_url() ?>">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="<?= site_url('books') ?>">Books</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="<?= site_url('files') ?>">Files</a>
 				</li>
 			</ul>
 			<a class="navbar-text" href="<?=route_to('logout') ?>" id="login"><i class="fas fa-sign-out-alt"></i> Logout</a>
     	</div>
-
 <?php
 else:
 ?>
@@ -75,3 +78,26 @@ endif;
 	<?= service('alerts')->display() ?>
 	
 	<main role="main" class="container my-5 pb-5">
+		<?= $this->renderSection('main') ?>
+	</main>
+
+	<footer class="footer">
+		<div class="float-left mx-4">
+			<?= themes_form('themed-select custom-select custom-select-sm') ?>
+		</div>
+		<div class="container">
+			<div class="col text-muted text-center">&copy; <?=date("Y") ?> Sefer Project</div>
+		</div>
+	</footer>
+	
+	<script>
+		var baseUrl = "<?= base_url() ?>";
+		var siteUrl = "<?= site_url() ?>";
+		var apiUrl  = "<?= site_url('api/') ?>";
+	</script>
+	
+	<?= service('assets')->js() ?>
+
+	<?= $this->renderSection('pageScripts') ?>
+</body>
+</html>
