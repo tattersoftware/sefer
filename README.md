@@ -1,4 +1,8 @@
-# sefer
+# Abandoned!
+
+This project is no longer being developed. See [WP Tesseract](https://wordpress.org/plugins/wp-tesseract/) instead.
+
+## sefer
 Main repo for the Sefer Project
 
 ## Requirements
