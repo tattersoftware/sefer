@@ -4,7 +4,11 @@
 	"description": "The Sefer Project",
 	"keywords": [
 		"codeigniter",
-		"codeigniter4"
+		"codeigniter4",
+		"wordpress",
+		"sefer",
+		"books",
+		"ocr"
 	],
 	"homepage": "https://sefer.red",
 	"license": "GNU General Public License",
@@ -17,16 +21,12 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2",
+		"php": ">=7.3",
 		"codeigniter4/codeigniter4": "dev-develop"
 	},
 	"require-dev": {
-		"tatter/tools": "^1.0"
-	},
-	"autoload": {
-		"psr-4": {
-			"Organization\\\\Name\\\\": "src"
-		}
+		"tatter/tools": "^1.0",
+		"tatter/patches": "^1.1"
 	},
 	"autoload-dev": {
 		"psr-4": {
@@ -42,7 +42,6 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"scripts": {
-		"post-update-cmd": [],
 		"analyze": "phpstan analyze",
 		"style": "phpcs --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ app/",
 		"test": "phpunit"

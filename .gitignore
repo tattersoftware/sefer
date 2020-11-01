@@ -60,6 +60,9 @@ writable/session/*
 writable/uploads/*
 !writable/uploads/index.html
 
+writable/patches/*
+!writable/patches/index.html
+
 writable/debugbar/*
 
 php_errors.log
