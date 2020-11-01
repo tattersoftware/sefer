@@ -51,6 +51,16 @@ class Database extends Config
 	];
 
 	/**
+	 * The WordPress database connection.
+	 *
+	 * @var array
+	 */
+	public $wordpress = [
+		'DBDriver' => 'Tatter\WordPress\Database',
+		'WPConfig' => '',
+	];
+
+	/**
 	 * This database connection is used when
 	 * running PHPUnit database tests.
 	 *
