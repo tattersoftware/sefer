@@ -20,8 +20,8 @@
 # APP
 #--------------------------------------------------------------------
 
-# app.baseURL = ''
-# app.forceGlobalSecureRequests = false
+app.baseURL = 'https://sefer.red/'
+app.forceGlobalSecureRequests = true
 
 # app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
 # app.sessionCookieName = 'ci_session'
