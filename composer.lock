@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1add59d949acb7ddd69e6e6a2a7db772",
+    "content-hash": "b61694a03058af1305e4c64cd6a6b5d4",
     "packages": [
         {
             "name": "codeigniter4/codeigniter4",
@@ -76,6 +76,55 @@
                 "issues": "https://github.com/codeigniter4/CodeIgniter4/issues"
             },
             "time": "2020-10-31T04:57:30+00:00"
+        },
+        {
+            "name": "components/jquery",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "b33e8f0f9a1cb2ae390cf05d766a900b53d2125b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/b33e8f0f9a1cb2ae390cf05d766a900b53d2125b",
+                "reference": "b33e8f0f9a1cb2ae390cf05d766a900b53d2125b",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JS Foundation and other contributors"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "support": {
+                "forum": "http://forum.jquery.com",
+                "irc": "irc://irc.freenode.org/jquery",
+                "issues": "https://github.com/jquery/jquery/issues",
+                "source": "https://github.com/jquery/jquery",
+                "wiki": "http://docs.jquery.com/"
+            },
+            "time": "2020-05-05T13:21:02+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -317,6 +366,476 @@
                 "source": "https://github.com/php-fig/log/tree/1.1.3"
             },
             "time": "2020-03-23T09:12:05+00:00"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v5.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "6cbebda22ffc0d4bb8fea0c1311c2ca54c4c8fa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/6cbebda22ffc0d4bb8fea0c1311c2ca54c4c8fa0",
+                "reference": "6cbebda22ffc0d4bb8fea0c1311c2ca54c4c8fa0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/css-selector/tree/v5.1.8"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-24T12:01:57+00:00"
+        },
+        {
+            "name": "tatter/assets",
+            "version": "v2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattersoftware/codeigniter4-assets.git",
+                "reference": "dc491682c5c919bedadb5c61e31af632800a3e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-assets/zipball/dc491682c5c919bedadb5c61e31af632800a3e53",
+                "reference": "dc491682c5c919bedadb5c61e31af632800a3e53",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "codeigniter4/codeigniter4": "dev-develop",
+                "codeigniter4/codeigniter4-standard": "^1.0",
+                "fzaninotto/faker": "^1.9@dev",
+                "mikey179/vfsstream": "^1.6",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tatter\\Assets\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Gatner",
+                    "email": "mgatner@tattersoftware.com",
+                    "homepage": "https://tattersoftware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Asset publishing and loading for CodeIgniter 4",
+            "homepage": "https://github.com/tattersoftware/codeigniter4-assets",
+            "keywords": [
+                "assets",
+                "codeigniter",
+                "codeigniter4",
+                "css",
+                "javascript",
+                "loader"
+            ],
+            "support": {
+                "issues": "https://github.com/tattersoftware/codeigniter4-assets/issues",
+                "source": "https://github.com/tattersoftware/codeigniter4-assets/tree/v2.2.1"
+            },
+            "time": "2020-09-29T00:28:22+00:00"
+        },
+        {
+            "name": "tatter/audits",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattersoftware/codeigniter4-audits.git",
+                "reference": "55c0431f4aaaedcf701df0cfcf68997aa18e99bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-audits/zipball/55c0431f4aaaedcf701df0cfcf68997aa18e99bb",
+                "reference": "55c0431f4aaaedcf701df0cfcf68997aa18e99bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "codeigniter4/codeigniter4": "dev-develop",
+                "fzaninotto/faker": "^1.9@dev",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tatter\\Audits\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Gatner",
+                    "email": "mgatner@tattersoftware.com",
+                    "homepage": "https://tattersoftware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Lightweight object logging for CodeIgniter 4",
+            "homepage": "https://github.com/tattersoftware/codeigniter4-audits",
+            "keywords": [
+                "Audit",
+                "codeigniter",
+                "codeigniter4",
+                "events",
+                "logging"
+            ],
+            "support": {
+                "issues": "https://github.com/tattersoftware/codeigniter4-audits/issues",
+                "source": "https://github.com/tattersoftware/codeigniter4-audits/tree/develop"
+            },
+            "time": "2020-07-15T01:43:48+00:00"
+        },
+        {
+            "name": "tatter/outbox",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattersoftware/codeigniter4-outbox.git",
+                "reference": "c83a92f2f1bb07c483250726282ccfa1967044a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-outbox/zipball/c83a92f2f1bb07c483250726282ccfa1967044a9",
+                "reference": "c83a92f2f1bb07c483250726282ccfa1967044a9",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": "^3.3",
+                "php": ">=7.2",
+                "tatter/assets": "^2.2",
+                "tijsverkoyen/css-to-inline-styles": "^2.2",
+                "twbs/bootstrap": "^4.5"
+            },
+            "require-dev": {
+                "codeigniter4/codeigniter4": "dev-develop",
+                "codeigniter4/codeigniter4-standard": "^1.0",
+                "fzaninotto/faker": "^1.9@dev",
+                "mikey179/vfsstream": "^1.6",
+                "myth/auth": "dev-develop",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tatter\\Outbox\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Gatner",
+                    "email": "mgatner@tattersoftware.com",
+                    "homepage": "https://tattersoftware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Email toolkit for CodeIgniter 4",
+            "homepage": "https://github.com/tattersoftware/codeigniter4-outbox",
+            "keywords": [
+                "codeigniter",
+                "codeigniter4",
+                "email",
+                "inline",
+                "logging",
+                "outbox"
+            ],
+            "support": {
+                "issues": "https://github.com/tattersoftware/codeigniter4-outbox/issues",
+                "source": "https://github.com/tattersoftware/codeigniter4-outbox/tree/v1.1"
+            },
+            "time": "2020-10-26T19:50:33+00:00"
+        },
+        {
+            "name": "tatter/settings",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattersoftware/codeigniter4-settings.git",
+                "reference": "34a2cf3949f87f1bef89750504beea930d3af266"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-settings/zipball/34a2cf3949f87f1bef89750504beea930d3af266",
+                "reference": "34a2cf3949f87f1bef89750504beea930d3af266",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "codeigniter4/framework": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tatter\\Settings\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Gatner",
+                    "email": "mgatner@tattersoftware.com",
+                    "homepage": "https://tattersoftware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Lightweight settings management for CodeIgniter 4",
+            "homepage": "https://github.com/tattersoftware/codeigniter4-settings",
+            "keywords": [
+                "Settings",
+                "codeigniter",
+                "codeigniter4",
+                "preferences"
+            ],
+            "support": {
+                "issues": "https://github.com/tattersoftware/codeigniter4-settings/issues",
+                "source": "https://github.com/tattersoftware/codeigniter4-settings/tree/develop"
+            },
+            "time": "2019-09-26T19:45:38+00:00"
+        },
+        {
+            "name": "tatter/wordpress",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattersoftware/codeigniter4-wordpress.git",
+                "reference": "f3af8439999154f41c29db539c3fbcda8cdbf3b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-wordpress/zipball/f3af8439999154f41c29db539c3fbcda8cdbf3b5",
+                "reference": "f3af8439999154f41c29db539c3fbcda8cdbf3b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "codeigniter4/codeigniter4": "dev-develop",
+                "codeigniter4/codeigniter4-standard": "^1.0",
+                "fakerphp/faker": "^1.10",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-cli/wp-cli-bundle": "^2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tatter\\WordPress\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Gatner",
+                    "email": "mgatner@tattersoftware.com",
+                    "homepage": "https://tattersoftware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WordPress content management for CodeIgniter 4",
+            "homepage": "https://github.com/tattersoftware/codeigniter4-wordpress",
+            "keywords": [
+                "codeigniter",
+                "codeigniter4",
+                "content",
+                "management",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/tattersoftware/codeigniter4-wordpress/issues",
+                "source": "https://github.com/tattersoftware/codeigniter4-wordpress/tree/v1.0.1"
+            },
+            "time": "2020-10-28T13:59:04+00:00"
+        },
+        {
+            "name": "tijsverkoyen/css-to-inline-styles",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
+                "reference": "b43b05cf43c1b6d849478965062b6ef73e223bb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/b43b05cf43c1b6d849478965062b6ef73e223bb5",
+                "reference": "b43b05cf43c1b6d849478965062b6ef73e223bb5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^5.5 || ^7.0 || ^8.0",
+                "symfony/css-selector": "^2.7 || ^3.0 || ^4.0 || ^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TijsVerkoyen\\CssToInlineStyles\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tijs Verkoyen",
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
+            "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
+            "support": {
+                "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
+                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
+            },
+            "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v4.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a716fb03f965dc0846df479e14388b1b4b93d7ce",
+                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v4.5.3"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/bootstrap",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-10-13T15:38:30+00:00"
         }
     ],
     "packages-dev": [

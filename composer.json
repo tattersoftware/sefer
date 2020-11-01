@@ -22,7 +22,11 @@
 	],
 	"require": {
 		"php": ">=7.3",
-		"codeigniter4/codeigniter4": "dev-develop"
+		"codeigniter4/codeigniter4": "dev-develop",
+		"tatter/wordpress": "^1.0",
+		"tatter/audits": "^1.0",
+		"tatter/outbox": "^1.1",
+		"tatter/settings": "^1.0"
 	},
 	"require-dev": {
 		"tatter/tools": "^1.0",
