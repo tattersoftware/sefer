@@ -20,6 +20,7 @@ class DatabaseConfigTest extends DatabaseTestCase
 
 	public function testCanConnectTests()
 	{
+		// A few of the expected tables
 		$expected = [
 			'db_migrations',
 			'db_settings',

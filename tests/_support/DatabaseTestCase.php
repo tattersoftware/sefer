@@ -20,10 +20,7 @@ class DatabaseTestCase extends CIDatabaseTestCase
 		parent::setUp();
 
 		// Migrate the `wordpress` group
-		$runner = Services::migrations(config('Migrations'), db_connect('wordpress'));
-		$runner->setSilent(false);
-		$runner->setNamespace('Tests\Support');
-		$runner->regress(0, 'wordpress');
-		$runner->latest('wordpress');
+		$this->migrations->setNamespace('Tests\Support');
+		$this->migrations->latest('wordpress');
 	}
 }
