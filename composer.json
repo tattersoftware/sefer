@@ -25,7 +25,7 @@
 		"codeigniter4/codeigniter4": "dev-develop",
 		"tatter/wordpress": "^1.0",
 		"tatter/audits": "^1.0",
-		"tatter/outbox": "^1.1",
+		"tatter/outbox": "^2.0",
 		"tatter/settings": "^1.0"
 	},
 	"require-dev": {
