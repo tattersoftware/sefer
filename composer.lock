@@ -615,30 +615,33 @@
         },
         {
             "name": "tatter/settings",
-            "version": "v1.1.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tattersoftware/codeigniter4-settings.git",
-                "reference": "ac6a113303794f010db79c69e076c6cd8858fbcf"
+                "reference": "0d0f59d156e599f3dec24535f1d770f1386076ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-settings/zipball/ac6a113303794f010db79c69e076c6cd8858fbcf",
-                "reference": "ac6a113303794f010db79c69e076c6cd8858fbcf",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-settings/zipball/0d0f59d156e599f3dec24535f1d770f1386076ed",
+                "reference": "0d0f59d156e599f3dec24535f1d770f1386076ed",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
                 "codeigniter4/codeigniter4": "dev-develop",
-                "tatter/tools": "^1.2"
+                "tatter/tools": "^1.8"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Tatter\\Settings\\": "src"
-                }
+                },
+                "exclude-from-classmap": [
+                    "**/Database/Migrations/**"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -662,9 +665,19 @@
             ],
             "support": {
                 "issues": "https://github.com/tattersoftware/codeigniter4-settings/issues",
-                "source": "https://github.com/tattersoftware/codeigniter4-settings/tree/v1.1.0"
+                "source": "https://github.com/tattersoftware/codeigniter4-settings/tree/v1.2.1"
             },
-            "time": "2020-11-12T18:01:10+00:00"
+            "funding": [
+                {
+                    "url": "https://paypal.me/tatter",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tattersoftware",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-05-24T15:33:32+00:00"
         },
         {
             "name": "tatter/wordpress",
