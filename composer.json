@@ -23,14 +23,14 @@
 	"require": {
 		"php": ">=7.3",
 		"codeigniter4/codeigniter4": "dev-develop",
+		"myth/auth": "dev-develop",
 		"tatter/wordpress": "^1.0",
 		"tatter/audits": "^1.0",
 		"tatter/outbox": "^2.0",
-		"tatter/settings": "^1.0"
+		"tatter/settings": "^2.0"
 	},
 	"require-dev": {
-		"tatter/tools": "^1.0",
-		"tatter/patches": "^1.1"
+		"tatter/tools": "^1.0"
 	},
 	"autoload-dev": {
 		"psr-4": {
@@ -41,6 +41,10 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/codeigniter4/codeigniter4"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/lonnieezell/myth-auth"
 		}
 	],
 	"minimum-stability": "dev",
