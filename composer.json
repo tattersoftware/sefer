@@ -1,57 +1,64 @@
 {
-	"name": "tatter/sefer",
-	"type": "project",
-	"description": "The Sefer Project",
-	"keywords": [
-		"codeigniter",
-		"codeigniter4",
-		"wordpress",
-		"sefer",
-		"books",
-		"ocr"
-	],
-	"homepage": "https://sefer.red",
-	"license": "GNU General Public License",
-	"authors": [
-		{
-			"name": "Tatter Software",
-			"email": "support@tattersoftware.com",
-			"homepage": "https://tattersoftware.com",
-			"role": "Owner"
-		}
-	],
-	"require": {
-		"php": ">=7.3",
-		"codeigniter4/codeigniter4": "dev-develop",
-		"myth/auth": "dev-develop",
-		"tatter/wordpress": "^1.0",
-		"tatter/audits": "^1.0",
-		"tatter/outbox": "^2.0",
-		"tatter/settings": "^2.0"
-	},
-	"require-dev": {
-		"tatter/tools": "^1.0"
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Tests\\Support\\": "tests/_support"
-		}
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/codeigniter4/codeigniter4"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/lonnieezell/myth-auth"
-		}
-	],
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"scripts": {
-		"analyze": "phpstan analyze",
-		"style": "phpcs --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ app/",
-		"test": "phpunit"
-	}
+    "name": "tatter/sefer",
+    "type": "project",
+    "description": "The Sefer Project",
+    "keywords": [
+        "codeigniter",
+        "codeigniter4",
+        "wordpress",
+        "sefer",
+        "books",
+        "ocr"
+    ],
+    "homepage": "https://sefer.red",
+    "license": "GNU General Public License",
+    "authors": [
+        {
+            "name": "Tatter Software",
+            "email": "support@tattersoftware.com",
+            "homepage": "https://tattersoftware.com",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "codeigniter4/codeigniter4": "dev-develop",
+        "myth/auth": "dev-develop",
+        "tatter/audits": "^1.0",
+        "tatter/outbox": "^2.0",
+        "tatter/settings": "^2.0",
+        "tatter/wordpress": "^1.0"
+    },
+    "require-dev": {
+        "tatter/tools": "^1.10"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codeigniter4/codeigniter4"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/lonnieezell/myth-auth"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "analyze": "phpstan analyze",
+        "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
+        "patch": "patch",
+        "style": "php-cs-fixer fix --verbose --ansi",
+        "test": "phpunit"
+    }
 }
