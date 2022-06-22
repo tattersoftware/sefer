@@ -783,27 +783,29 @@
         },
         {
             "name": "tatter/settings",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tattersoftware/codeigniter4-settings.git",
-                "reference": "c7241f18b161b20beaae8186dc98ed6ddb4f02a9"
+                "reference": "8f2dc2be6a5b7ab66cd4b6d7b22c5b5e33c3d4f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-settings/zipball/c7241f18b161b20beaae8186dc98ed6ddb4f02a9",
-                "reference": "c7241f18b161b20beaae8186dc98ed6ddb4f02a9",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-settings/zipball/8f2dc2be6a5b7ab66cd4b6d7b22c5b5e33c3d4f9",
+                "reference": "8f2dc2be6a5b7ab66cd4b6d7b22c5b5e33c3d4f9",
                 "shasum": ""
             },
             "require": {
-                "codeigniter4/authentication-implementation": "1.0",
-                "php": "^7.3 || ^8.0",
-                "tatter/users": "^1.0"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
+                "codeigniter4/authentication-implementation": "1.0",
                 "codeigniter4/codeigniter4": "dev-develop",
                 "myth/auth": "dev-develop",
-                "tatter/tools": "^1.8"
+                "tatter/tools": "^1.10"
+            },
+            "suggest": {
+                "codeigniter4/authentication-implementation": "Allows for user setting overrides"
             },
             "type": "library",
             "autoload": {
@@ -836,7 +838,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tattersoftware/codeigniter4-settings/issues",
-                "source": "https://github.com/tattersoftware/codeigniter4-settings/tree/v2.0.0"
+                "source": "https://github.com/tattersoftware/codeigniter4-settings/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -848,76 +850,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-26T14:45:55+00:00"
-        },
-        {
-            "name": "tatter/users",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tattersoftware/codeigniter4-users.git",
-                "reference": "ffc8a8f4a8dc13b08291abd5eeb34caa3471c45a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-users/zipball/ffc8a8f4a8dc13b08291abd5eeb34caa3471c45a",
-                "reference": "ffc8a8f4a8dc13b08291abd5eeb34caa3471c45a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.3 || ^8.0"
-            },
-            "require-dev": {
-                "agungsugiarto/codeigniter4-authentication": "dev-master",
-                "codeigniter4/codeigniter4": "dev-develop",
-                "lonnieezell/codigniter-shield": "dev-develop",
-                "myth/auth": "dev-develop",
-                "tatter/tools": "^1.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Tatter\\Users\\": "src"
-                },
-                "exclude-from-classmap": [
-                    "**/Database/Migrations/**"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthew Gatner",
-                    "email": "mgatner@tattersoftware.com",
-                    "homepage": "https://tattersoftware.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "User interfaces and provider for CodeIgniter 4",
-            "homepage": "https://github.com/tattersoftware/codeigniter4-users",
-            "keywords": [
-                "Authentication",
-                "Users",
-                "codeigniter",
-                "codeigniter4"
-            ],
-            "support": {
-                "issues": "https://github.com/tattersoftware/codeigniter4-users/issues",
-                "source": "https://github.com/tattersoftware/codeigniter4-users/tree/v1.1.0"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/tatter",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tattersoftware",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-03-01T03:14:42+00:00"
+            "time": "2021-07-10T12:23:06+00:00"
         },
         {
             "name": "tatter/wordpress",
